@@ -1,3 +1,6 @@
+let txtArray = $('pre').innerText.split('\n').filter(a => a.length),
+	thisCollection;
+
 class Collection{
 	constructor(){
 		this.bags = [];
@@ -53,11 +56,6 @@ function findBagHasColors(bagName){
 	return total;
 }
 
-let txtArray = $('pre').innerText.split('\n').filter(a => a.length),
-	thisCollection = contentCollection(txtArray);
-	
-console.log(findBagHasColors('shiny gold').size);
-
 function findNumBagOf(bagName){
 	let current = thisCollection.bags.find(a => a.name == bagName),
 		total = 0;
@@ -69,4 +67,7 @@ function findNumBagOf(bagName){
 	return total;
 }
 
+thisCollection = contentCollection(txtArray);
+	
+console.log(findBagHasColors('shiny gold').size);
 console.log(findNumBagOf('shiny gold'))
