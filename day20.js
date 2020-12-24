@@ -1,4 +1,4 @@
-const tilesList = require('fs').readFileSync('day20-sample.txt').toString().trim();
+const input = require('fs').readFileSync('day20-sample.txt').toString().trim();
 let tiles = [], image;
 
 class Tile{
@@ -21,7 +21,7 @@ class Tile{
 getTilesArrangement();
 
 function getTilesArrangement(){
-    for(let tile of tilesList.split('\r\n\r\n')){
+    for(let tile of input.split('\r\n\r\n')){
         let [, key, image] = tile.match(/^.*?(\d+):([\r\n.#]*)/), 
             temp = new Tile(key, image.trim());
 
