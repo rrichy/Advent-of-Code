@@ -1,4 +1,4 @@
-const input = require('fs').readFileSync('day20-sample.txt').toString().trim().replace(/#/g, '1').replace(/\./g, '0');
+const input = require('fs').readFileSync('day20-input.txt').toString().trim().replace(/#/g, '1').replace(/\./g, '0');
 let tiles = [], image;
 
 class Tile{
@@ -26,6 +26,14 @@ class Tile{
             else temp = rotate(temp);
         }
     }
+}
+
+String.prototype.replaceAt = function(index, replacement) {
+    if (index >= this.length) {
+        return this.valueOf();
+    }
+ 
+    return this.substring(0, index) + replacement + this.substring(index + 1);
 }
 
 getTilesArrangement();
@@ -96,23 +104,41 @@ function getTilesArrangement(){
 
                                               
     tempImage = JSON.parse(JSON.stringify(image));          //combining tiles into string to form image (unoriented)
-    image = '';
+    image = [], temp = '';
     
     for(let i = 0; i < grid; i++){
         for(let j = 0; j < tilelength - 2; j++){
             for(let k = 0; k < grid; k++){
-                image += tempImage[i][k][j];
+                temp += tempImage[i][k][j];
             }
-            image += '\n';
+            image.push(temp);
+            temp = '';
         }
     }
-    console.log(image);
 }
 
 function getCorners(){
     return tiles.filter(a => a.border.length == 2)
                 .map(a => parseInt(a.tile))
                 .reduce((a, b) => a * b);
+}
+
+function getNumFromMonsters(){
+    let temp = [];
+    for(let i = 0; i < 8; i++){
+        if(findMonster(image)) temp.push(image.concat());
+        if(i == 3) image.reverse()
+        else image = rotate2(image);
+    }
+
+    temp = temp.map(a => {
+        while(findMonster(a)){
+            a = findMonster(a);
+        }
+        return a.reduce((a, b) => a + b.match(/1/g).length, 0);
+    });
+    
+    return Math.min(...temp);
 }
 
 function rotate(a){
@@ -126,13 +152,38 @@ function rotate(a){
     return temp;
 }
 
-//let sub = new Map(tilesEdges);
-//sub.delete('2311');
+function rotate2(a){
+    a = a.map(b => b.split(''));
+    let temp = Array(a.length).fill().map(_=>[]);
+    for(let i = 0; i < a.length; i++){
+        for(let j = 0; j < a.length; j++){
+            temp[j].unshift(a[i].shift());
+        }
+    }
 
-//console.log(sub);
+    return temp.map(b => b.join(''));
+}
+
+
+function findMonster(grid){
+    let temp = grid.concat();
+    let midIndex = temp.findIndex(a => /1....11....11....111/.test(a));
+    if(midIndex < 0) return false;
+
+    let prefixLength = temp.find(a => /1....11....11....111/.test(a)).match(/(.*)1....11....11....111/)[1].length;
+
+    if(new RegExp('.{' + prefixLength + '}.{18}1').test(temp[midIndex - 1]) && new RegExp('.{' + prefixLength + '}.1..1..1..1..1..1').test(temp[midIndex + 1])){
+        temp[midIndex - 1] = temp[midIndex - 1].replaceAt(prefixLength + 18, 'O');
+        for(let i of [0, 5, 6, 11, 12, 17, 18, 19]){
+            temp[midIndex] = temp[midIndex].replaceAt(prefixLength + i, 'O');
+        }
+        for(let i of [1, 4, 7, 10, 13, 16]){
+            temp[midIndex + 1] = temp[midIndex + 1].replaceAt(prefixLength + i, 'O');
+        }
+        return temp;
+    }
+    else return false;
+}
 
 console.log('Part 1:', getCorners());
-//console.log(image[0]);
-
-
-//console.log(image[0][1]);
+console.log('Part 2:', getNumFromMonsters());
