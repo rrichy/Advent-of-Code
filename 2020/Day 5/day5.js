@@ -1,5 +1,6 @@
-txt = $('pre').outerText.split('\n').filter(a=>a.length);
-list = txt.map(idDecoder).sort((a,b)=> a-b);
+const input = require('fs').readFileSync('input.txt').toString().trim().split(/\r?\n/).filter(a=>a.length);
+let list = input.map(idDecoder).sort((a,b)=> a-b);
+
 console.log('Highest seat ID on a boarding pass:', list[list.length - 1]);
 console.log('Seat Id:', list.filter((a,i)=>a-1 != list[i-1])[1] - 1);
 

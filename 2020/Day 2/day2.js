@@ -1,4 +1,4 @@
-const passwords = $('pre').innerText.trim().split('\n');
+const passwords = require('fs').readFileSync('input.txt').toString().trim().split(/\r?\n/);
 
 function validPasswords(arr){
     let valid = 0;

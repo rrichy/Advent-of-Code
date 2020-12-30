@@ -1,7 +1,7 @@
-const input = require('fs').readFileSync('day3-input.txt').toString().trim();
+const input = require('fs').readFileSync('input.txt').toString().trim();
 
 function tobogganRun(right, down){
-    let area = input.split('\r\n');
+    let area = input.split(/\r?\n/);
     let [x, y] = [0, 0], trees = 0;
 
     while(true){

@@ -1,7 +1,7 @@
-const input = require('fs').readFileSync('day4-input.txt').toString().trim();
+const input = require('fs').readFileSync('input.txt').toString().trim();
 
 function findValid(withRestriction = 0){
-    let individuals = input.split('\r\n\r\n'), numValids = 0;
+    let individuals = input.split(/\r?\n\r?\n/), numValids = 0;
 
     for(let doc of individuals){
         let docs = doc.match(/(byr|iyr|eyr|hgt|hcl|ecl|pid):(#?\w+)/g);

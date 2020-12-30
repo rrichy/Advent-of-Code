@@ -1,4 +1,4 @@
-const expenses = require('fs').readFileSync('sample.txt').toString().trim().split('\n').map(Number);
+const expenses = require('fs').readFileSync('input.txt').toString().trim().split(/\r?\n/).map(Number);
 
 function findValuesWithSum(arr, sum, numVals = 2){
     let set = new Set();
