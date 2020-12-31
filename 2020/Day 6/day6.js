@@ -1,4 +1,4 @@
-let txt = $('pre').innerText.split('\n\n');
+let txt = require('fs').readFileSync('input.txt').toString().trim().split(/\r?\n\r?\n/);
 console.log('Sum of counts:', txt.reduce((a,b) => a + numQuestions(b), 0));
 console.log('Sum of counts w/ correction:', txt.reduce((a,b) => a + numCorrection(b), 0));
 
