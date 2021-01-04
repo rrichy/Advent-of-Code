@@ -1,8 +1,8 @@
 # Answers
 
-| Part 1 |                       Part 2                       |
-| ------ | -------------------------------------------------- |
-| `2072` | `fdsfpg,jmvxx,lkv,cbzcgvc,kfgln,pqqks,pqrvc,lclnj` |
+| Part 1 |                      Part 2                       |
+| ------ | ------------------------------------------------- |
+| `1913` | `gpgrb,tjlz,gtjmd,spbxz,pfdkkzp,xcfpc,txzv,znqbr` |
 
 ## --- Day 21: Allergen Assessment ---
 
