@@ -1,34 +1,45 @@
-function findJoltage1_3(){
-    const text = $('pre').innerText.trim().split('\n').map(Number), builtInJoltage = Math.max(...text) + 3;
-    let differences = {}, prev = 0, removable = [], lastStored = 0;
+const fs = require('fs');
 
-    for(let i of [...text.sort((a, b) => a - b), builtInJoltage]){
-        differences[i - prev] = (differences[i - prev] || 0) + 1;
-        prev = i;
+const input = fs.readFileSync('input.txt').toString().trim();
+const sample1 = fs.readFileSync('sample1.txt').toString().trim();
+const sample2 = fs.readFileSync('sample2.txt').toString().trim();
 
-        if(i - lastStored < 3){
-            removable.push(i);
-        }
-        else{
-            if(i - lastStored > 3){
-                removable.pop()
-            }
+function getSetup(adaptersList){
+    const adapters = adaptersList.split(/\r?\n/).map(Number).sort((a, b) => a - b),
+        builtIn = adapters[adapters.length - 1] + 3;
 
-            lastStored = i;
-        }        
-    }
+    adapters.unshift(0);
+    adapters.push(builtIn);
 
-    return [differences, removable];
+    return adapters;
 }
 
-/*
-lengthremoved + lrC0 + lrC1 + lrC2 + ... + lrCn
-1, 4, 5, 6, 7, 10, 11, 12, 15, 16, 19   whole
-1, 4, 5, 6, 7, 10, 12, 15, 16, 19   11-removed
-1, 4, 5, 7, 10, 11, 12, 15, 16, 19  6-removed
-1, 4, 5, 7, 10, 12, 15, 16, 19      6-11-removed
-1, 4, 6, 7, 10, 11, 12, 15, 16, 19  5-removed
-1, 4, 6, 7, 10, 12, 15, 16, 19      5-11-removed
-1, 4, 7, 10, 11, 12, 15, 16, 19     5-6-removed
-1, 4, 7, 10, 12, 15, 16, 19         5-6-11-removed
-*/
+function getNumDifference(adaptersList){
+    let differences = [0, 0, 0];
+
+    for(let i = 1; i < adaptersList.length; i++){
+        differences[adaptersList[i] - adaptersList[i - 1] - 1]++;
+    }
+
+    return differences[0] * differences[2];
+}
+
+function getDistinctOrder(adaptersList){
+    let ways = {6: 13, 5: 7, 4: 4, 3: 2, 2: 1, 1: 1}, // from manually determining number of ways given length of numbers with difference of 1
+        block = [], temp = 1;
+
+    for(let i = 1; i < adaptersList.length; i++){
+        if(adaptersList[i] - adaptersList[i - 1] === 3){ 
+            block.push(temp); // push number of distinct ways the temp can be arranged
+            temp = 1;
+        }
+        else temp++;
+    }
+    
+    return block.reduce((a, b) => a * ways[b], 1);
+}
+
+let setup = getSetup(input);
+
+console.log('Part 1:', getNumDifference(setup));
+console.log('Part 2:', getDistinctOrder(setup));
