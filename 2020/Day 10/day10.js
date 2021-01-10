@@ -25,7 +25,7 @@ function getNumDifference(adaptersList){
 }
 
 function getDistinctOrder(adaptersList){
-    let ways = {6: 13, 5: 7, 4: 4, 3: 2, 2: 1, 1: 1}, // from manually determining number of ways given length of numbers with difference of 1
+    let ways = {6: 13, 5: 7, 4: 4, 3: 2, 2: 1, 1: 1}, // from manually determining number of ways with given length of numbers with difference of 1
         block = [], temp = 1;
 
     for(let i = 1; i < adaptersList.length; i++){
