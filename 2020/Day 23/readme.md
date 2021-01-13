@@ -2,7 +2,7 @@
 
 |   Part 1   |  Part 2 |
 | ---------- | ------- |
-| `49725386` | `33266` |
+| `49725386` | `538935646702` |
 
 ## --- Day 23: Crab Cups ---
 The small crab challenges _you_ to a game! The crab is going to mix up some cups, and you have to predict where they'll end up.
