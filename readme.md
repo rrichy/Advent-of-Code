@@ -2,7 +2,7 @@
 
 > [Advent of Code](https://adventofcode.com/) is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like. People use them as a speed contest, interview prep, company training, university coursework,practice problems, or to challenge each other.
 
-This repo serves as a collection of my solutions for the puzzles in **Advent of Code**, made by [Eric Wastl](http://was.tl/). All my solutions are currently written in JavaScript and to be run via [NodeJS](https://nodejs.org/). I plan on answering all the puzzles in the future and write solutions in other language. Also, having an interactive page for each puzzles that shows my view of what is happenning in the puzzle.
+This repo serves as a collection of my solutions for the puzzles in **Advent of Code**, made by [Eric Wastl](http://was.tl/). All my solutions are currently written in JavaScript and to be run via [NodeJS](https://nodejs.org/). I plan on answering all the puzzles in the future and write solutions in other language, which will improve my coding in those language. Also, having an interactive page for each puzzles that shows my view of what is happenning in the puzzle will also improve my skills in HTML and CSS.
 
 ## 2020 Puzzles List
 
