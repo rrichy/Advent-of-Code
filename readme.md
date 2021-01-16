@@ -10,11 +10,11 @@ Completed: **25 / 25** (100%) ⭐️
 
 |                              |                               |                               |                                |                               |
 | ---------------------------- | ----------------------------- | ----------------------------- | ------------------------------ | ----------------------------- |
-| [✔️ Day 1](<./2020/Day 1/>) | [✔️ Day 6](<./2020/Day 6/>)   | [✔️ Day 11](<./2020/Day 11/>) | [✔️ Day 16](<./2020/Day 16/>) | [✔️ Day 21](<./2020/Day 21/>) |
-| [✔️ Day 2](<./2020/Day 2/>) | [✔️ Day 7](<./2020/Day 7/>)   | [✔️ Day 12](<./2020/Day 12/>) | [✔️ Day 17](<./2020/Day 17/>) | [✔️ Day 22](<./2020/Day 22/>) |
-| [✔️ Day 3](<./2020/Day 3/>) | [✔️ Day 8](<./2020/Day 8/>)   | [✔️ Day 13](<./2020/Day 13/>) | [✔️ Day 18](<./2020/Day 18/>) | [✔️ Day 23](<./2020/Day 23/>) |
-| [✔️ Day 4](<./2020/Day 4/>) | [✔️ Day 9](<./2020/Day 9/>)   | [✔️ Day 14](<./2020/Day 14/>) | [✔️ Day 19](<./2020/Day 19/>) | [✔️ Day 24](<./2020/Day 24/>) |
-| [✔️ Day 5](<./2020/Day 5/>) | [✔️ Day 10](<./2020/Day 10/>) | [✔️ Day 15](<./2020/Day 15/>) | [✔️ Day 20](<./2020/Day 20/>) | [✔️ Day 25](<./2020/Day 25/>) |
+| [✔️ Day 1](<./Solutions/2020/Day 1/>) | [✔️ Day 6](<./Solutions/2020/Day 6/>)   | [✔️ Day 11](<./Solutions/2020/Day 11/>) | [✔️ Day 16](<./Solutions/2020/Day 16/>) | [✔️ Day 21](<./Solutions/2020/Day 21/>) |
+| [✔️ Day 2](<./Solutions/2020/Day 2/>) | [✔️ Day 7](<./Solutions/2020/Day 7/>)   | [✔️ Day 12](<./Solutions/2020/Day 12/>) | [✔️ Day 17](<./Solutions/2020/Day 17/>) | [✔️ Day 22](<./Solutions/2020/Day 22/>) |
+| [✔️ Day 3](<./Solutions/2020/Day 3/>) | [✔️ Day 8](<./Solutions/2020/Day 8/>)   | [✔️ Day 13](<./Solutions/2020/Day 13/>) | [✔️ Day 18](<./Solutions/2020/Day 18/>) | [✔️ Day 23](<./Solutions/2020/Day 23/>) |
+| [✔️ Day 4](<./Solutions/2020/Day 4/>) | [✔️ Day 9](<./Solutions/2020/Day 9/>)   | [✔️ Day 14](<./Solutions/2020/Day 14/>) | [✔️ Day 19](<./Solutions/2020/Day 19/>) | [✔️ Day 24](<./Solutions/2020/Day 24/>) |
+| [✔️ Day 5](<./Solutions/2020/Day 5/>) | [✔️ Day 10](<./Solutions/2020/Day 10/>) | [✔️ Day 15](<./Solutions/2020/Day 15/>) | [✔️ Day 20](<./Solutions/2020/Day 20/>) | [✔️ Day 25](<./Solutions/2020/Day 25/>) |
 
 
 ## 2019 Puzzles List
@@ -23,11 +23,11 @@ Completed: **3 / 25** (12%) 🔜
 
 |                              |                               |                               |                                |                               |
 | ---------------------------- | ----------------------------- | ----------------------------- | ------------------------------ | ----------------------------- |
-| [✔️ Day 1](<./2019/Day 1/>) | [Day 6](<./2019/Day 6/>)   | [Day 11](<./2019/Day 11/>) | [Day 16](<./2019/Day 16/>) | [Day 21](<./2019/Day 21/>) |
-| [✔️ Day 2](<./2019/Day 2/>) | [Day 7](<./2019/Day 7/>)   | [Day 12](<./2019/Day 12/>) | [Day 17](<./2019/Day 17/>) | [Day 22](<./2019/Day 22/>) |
-| [✔️ Day 3](<./2019/Day 3/>) | [Day 8](<./2019/Day 8/>)   | [Day 13](<./2019/Day 13/>) | [Day 18](<./2019/Day 18/>) | [Day 23](<./2019/Day 23/>) |
-| [Day 4](<./2019/Day 4/>) | [Day 9](<./2019/Day 9/>)   | [Day 14](<./2019/Day 14/>) | [Day 19](<./2019/Day 19/>) | [Day 24](<./2019/Day 24/>) |
-| [Day 5](<./2019/Day 5/>) | [Day 10](<./2019/Day 10/>) | [Day 15](<./2019/Day 15/>) | [Day 20](<./2019/Day 20/>) | [Day 25](<./2019/Day 25/>) |
+| [✔️ Day 1](<./Solutions/2019/Day 1/>) | [Day 6](<./Solutions/2019/Day 6/>)   | [Day 11](<./Solutions/2019/Day 11/>) | [Day 16](<./Solutions/2019/Day 16/>) | [Day 21](<./Solutions/2019/Day 21/>) |
+| [✔️ Day 2](<./Solutions/2019/Day 2/>) | [Day 7](<./Solutions/2019/Day 7/>)   | [Day 12](<./Solutions/2019/Day 12/>) | [Day 17](<./Solutions/2019/Day 17/>) | [Day 22](<./Solutions/2019/Day 22/>) |
+| [✔️ Day 3](<./Solutions/2019/Day 3/>) | [Day 8](<./Solutions/2019/Day 8/>)   | [Day 13](<./Solutions/2019/Day 13/>) | [Day 18](<./Solutions/2019/Day 18/>) | [Day 23](<./Solutions/2019/Day 23/>) |
+| [Day 4](<./Solutions/2019/Day 4/>) | [Day 9](<./Solutions/2019/Day 9/>)   | [Day 14](<./Solutions/2019/Day 14/>) | [Day 19](<./Solutions/2019/Day 19/>) | [Day 24](<./Solutions/2019/Day 24/>) |
+| [Day 5](<./Solutions/2019/Day 5/>) | [Day 10](<./Solutions/2019/Day 10/>) | [Day 15](<./Solutions/2019/Day 15/>) | [Day 20](<./Solutions/2019/Day 20/>) | [Day 25](<./Solutions/2019/Day 25/>) |
 
 ## 2015 Puzzles List
 
@@ -35,16 +35,16 @@ Completed: **3 / 25** (12%) 🔜
 
 |                              |                               |                               |                                |                               |
 | ---------------------------- | ----------------------------- | ----------------------------- | ------------------------------ | ----------------------------- |
-| [✔️ Day 1](<./2015/Day 1/>) | [Day 6](<./2015/Day 6/>)   | [Day 11](<./2015/Day 11/>) | [Day 16](<./2015/Day 16/>) | [Day 21](<./2015/Day 21/>) |
-| [✔️ Day 2](<./2015/Day 2/>) | [Day 7](<./2015/Day 7/>)   | [Day 12](<./2015/Day 12/>) | [Day 17](<./2015/Day 17/>) | [Day 22](<./2015/Day 22/>) |
-| [✔️ Day 3](<./2015/Day 3/>) | [Day 8](<./2015/Day 8/>)   | [Day 13](<./2015/Day 13/>) | [Day 18](<./2015/Day 18/>) | [Day 23](<./2015/Day 23/>) |
-| [Day 4](<./2015/Day 4/>) | [Day 9](<./2015/Day 9/>)   | [Day 14](<./2015/Day 14/>) | [Day 19](<./2015/Day 19/>) | [Day 24](<./2015/Day 24/>) |
-| [Day 5](<./2015/Day 5/>) | [Day 10](<./2015/Day 10/>) | [Day 15](<./2015/Day 15/>) | [Day 20](<./2015/Day 20/>) | [Day 25](<./2015/Day 25/>) |
+| [✔️ Day 1](<./Solutions/2015/Day 1/>) | [Day 6](<./Solutions/2015/Day 6/>)   | [Day 11](<./Solutions/2015/Day 11/>) | [Day 16](<./Solutions/2015/Day 16/>) | [Day 21](<./Solutions/2015/Day 21/>) |
+| [✔️ Day 2](<./Solutions/2015/Day 2/>) | [Day 7](<./Solutions/2015/Day 7/>)   | [Day 12](<./Solutions/2015/Day 12/>) | [Day 17](<./Solutions/2015/Day 17/>) | [Day 22](<./Solutions/2015/Day 22/>) |
+| [✔️ Day 3](<./Solutions/2015/Day 3/>) | [Day 8](<./Solutions/2015/Day 8/>)   | [Day 13](<./Solutions/2015/Day 13/>) | [Day 18](<./Solutions/2015/Day 18/>) | [Day 23](<./Solutions/2015/Day 23/>) |
+| [Day 4](<./Solutions/2015/Day 4/>) | [Day 9](<./Solutions/2015/Day 9/>)   | [Day 14](<./Solutions/2015/Day 14/>) | [Day 19](<./Solutions/2015/Day 19/>) | [Day 24](<./Solutions/2015/Day 24/>) |
+| [Day 5](<./Solutions/2015/Day 5/>) | [Day 10](<./Solutions/2015/Day 10/>) | [Day 15](<./Solutions/2015/Day 15/>) | [Day 20](<./Solutions/2015/Day 20/>) | [Day 25](<./Solutions/2015/Day 25/>) |
 
-<!-- | [Day 1](<./2019/Day 1/>) | [Day 6](<./2019/Day 6/>)   | [Day 11](<./2019/Day 11/>) | [Day 16](<./2019/Day 16/>) | [Day 21](<./2019/Day 21/>) |
-| [Day 2](<./2019/Day 2/>) | [Day 7](<./2019/Day 7/>)   | [Day 12](<./2019/Day 12/>) | [Day 17](<./2019/Day 17/>) | [Day 22](<./2019/Day 22/>) |
-| [Day 3](<./2019/Day 3/>) | [Day 8](<./2019/Day 8/>)   | [Day 13](<./2019/Day 13/>) | [Day 18](<./2019/Day 18/>) | [Day 23](<./2019/Day 23/>) |
-| [Day 4](<./2019/Day 4/>) | [Day 9](<./2019/Day 9/>)   | [Day 14](<./2019/Day 14/>) | [Day 19](<./2019/Day 19/>) | [Day 24](<./2019/Day 24/>) |
-| [Day 5](<./2019/Day 5/>) | [Day 10](<./2019/Day 10/>) | [Day 15](<./2019/Day 15/>) | [Day 20](<./2019/Day 20/>) | [Day 25](<./2019/Day 25/>) | -->
+<!-- | [Day 1](<./Solutions/2019/Day 1/>) | [Day 6](<./Solutions/2019/Day 6/>)   | [Day 11](<./Solutions/2019/Day 11/>) | [Day 16](<./Solutions/2019/Day 16/>) | [Day 21](<./Solutions/2019/Day 21/>) |
+| [Day 2](<./Solutions/2019/Day 2/>) | [Day 7](<./Solutions/2019/Day 7/>)   | [Day 12](<./Solutions/2019/Day 12/>) | [Day 17](<./Solutions/2019/Day 17/>) | [Day 22](<./Solutions/2019/Day 22/>) |
+| [Day 3](<./Solutions/2019/Day 3/>) | [Day 8](<./Solutions/2019/Day 8/>)   | [Day 13](<./Solutions/2019/Day 13/>) | [Day 18](<./Solutions/2019/Day 18/>) | [Day 23](<./Solutions/2019/Day 23/>) |
+| [Day 4](<./Solutions/2019/Day 4/>) | [Day 9](<./Solutions/2019/Day 9/>)   | [Day 14](<./Solutions/2019/Day 14/>) | [Day 19](<./Solutions/2019/Day 19/>) | [Day 24](<./Solutions/2019/Day 24/>) |
+| [Day 5](<./Solutions/2019/Day 5/>) | [Day 10](<./Solutions/2019/Day 10/>) | [Day 15](<./Solutions/2019/Day 15/>) | [Day 20](<./Solutions/2019/Day 20/>) | [Day 25](<./Solutions/2019/Day 25/>) | -->
 
 <!-- emoji used: ⭐️🔜✔️⏳ -->

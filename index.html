@@ -1,106 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advent of Code</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Advent of Code</h1>
-        <h2>Visualization/Solutions</h2>
-        <h2>by: rrichy</h2>
-    </header>
-    <div id="year" style="display: grid;">
-        <ul>
-            <li><a href="javascript:openYear(2020)">2020</a></li>
-            <li><a href="javascript:openYear(2019)">2019</a></li>
-            <li><a href="javascript:openYear(2018)">2018</a></li>
-            <li><a href="javascript:openYear(2017)">2017</a></li>
-            <li><a href="javascript:openYear(2016)">2016</a></li>
-            <li><a href="javascript:openYear(2015)">2015</a></li>
-        </ul>
-    </div>
-    <div id="2020" style="width:400px; margin:20px auto; display:none; grid-template-columns: auto auto auto auto auto;">
-        <ul>
-            <li><a href="./2020/Day 1/#">Day 1</a></li>
-            <li><a href="./2020/Day 2/#">Day 2</a></li>
-            <li><a href="./2020/Day 3/#">Day 3</a></li>
-            <li><a href="./2020/Day 4/#">Day 4</a></li>
-            <li><a href="./2020/Day 5/#">Day 5</a></li>
-        </ul>
-        <ul>
-            <li><a href="./2020/Day 6/#">Day 6</a></li>
-            <li><a href="./2020/Day 7/#">Day 7</a></li>
-            <li><a href="./2020/Day 8/#">Day 8</a></li>
-            <li><a href="./2020/Day 9/#">Day 9</a></li>
-            <li><a href="./2020/Day 10/#">Day 10</a></li>
-        </ul>
-        <ul>
-            <li><a href="./2020/Day 11/#">Day 11</a></li>
-            <li><a href="./2020/Day 12/#">Day 12</a></li>
-            <li><a href="./2020/Day 13/#">Day 13</a></li>
-            <li><a href="./2020/Day 14/#">Day 14</a></li>
-            <li><a href="./2020/Day 15/#">Day 15</a></li>
-        </ul>
-        <ul>
-            <li><a href="./2020/Day 16/#">Day 16</a></li>
-            <li><a href="./2020/Day 17/#">Day 17</a></li>
-            <li><a href="./2020/Day 18/#">Day 18</a></li>
-            <li><a href="./2020/Day 19/#">Day 19</a></li>
-            <li><a href="./2020/Day 20/#">Day 20</a></li>
-        </ul>
-        <ul>
-            <li><a href="./2020/Day 21/#">Day 21</a></li>
-            <li><a href="./2020/Day 22/#">Day 22</a></li>
-            <li><a href="./2020/Day 23/#">Day 23</a></li>
-            <li><a href="./2020/Day 24/#">Day 24</a></li>
-            <li><a href="./2020/Day 25/#">Day 25</a></li>
-        </ul>
-    </div>
-    <div id="2019" style="width:400px; margin:20px auto; display:none; grid-template-columns: auto auto auto auto auto;">
-        <ul>
-            <li><a href="./2019/Day 1/#">Day 1</a></li>
-            <li><a href="./2019/Day 2/#">Day 2</a></li>
-            <li><a href="./2019/Day 3/#">Day 3</a></li>
-            <li><a href="./2019/Day 4/#">Day 4</a></li>
-            <li><a href="./2019/Day 5/#">Day 5</a></li>
-        </ul>
-    </div>
-    <div id="2018" style="width:400px; margin:20px auto; display:none;">
-        <h3>This area is still blank</h3>
-    </div>
-    <div id="2017" style="width:400px; margin:20px auto; display:none;">
-        <h3>This area is still blank</h3>
-    </div>
-    <div id="2016" style="width:400px; margin:20px auto; display:none;">
-        <h3>This area is still blank</h3>
-    </div>
-    <div id="2015" style="width:400px; margin:20px auto; display:none;">
-        <ul>
-            <li><a href="./2015/Day 1/#">Day 1</a></li>
-            <li><a href="./2015/Day 2/#">Day 2</a></li>
-            <li><a href="./2015/Day 3/#">Day 3</a></li>
-            <li><a href="./2015/Day 4/#">Day 4</a></li>
-            <li><a href="./2015/Day 5/#">Day 5</a></li>
-        </ul>
-    </div>
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Advent of Code Solutions</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-    <!-- back -->
-    <a id="back" href="javascript:backToNav()" style="display: none;">Back</a>
-    <script>
-        function openYear(year){
-            document.getElementById('year').style.display = 'none';
-            document.getElementById(year).style.display = 'grid';
-            document.getElementById('back').style.display = 'grid';
-        }
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>Advent of Code Solutions<br />
+								by rrichy</h1>
+								<blockquote><a href="https://adventofcode.com/">Advent of Code</a>, made by <a href="http://was.tl/">Eric Wastl</a>, is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in any programming language you like. People use them as a speed contest, interview prep, company training, university coursework,practice problems, or to challenge each other.</blockquote>
+							</header>
+							<section class="tiles">
+								<article class="style1">
+									<span class="image">
+										<img src="images/pic01.jpg" alt="" />
+									</span>
+									<a href="./Solutions/2020/#">
+										<h2>2020</h2>
+										<div class="content">
+											<p>A vacation at a nice resort on a tropical island.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style2">
+									<span class="image">
+										<img src="images/pic02.jpg" alt="" />
+									</span>
+									<a href="./Solutions/2019/#">
+										<h2>2019</h2>
+										<div class="content">
+											<p>Santa has become stranded at the edge of the Solar System while delivering presents to other planets!</p>
+										</div>
+									</a>
+								</article>
+								<article class="style3">
+									<span class="image">
+										<img src="images/pic03.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>2018</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style4">
+									<span class="image">
+										<img src="images/pic04.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>2017</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style5">
+									<span class="image">
+										<img src="images/pic05.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>2016</h2>
+										<div class="content">
+											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+										</div>
+									</a>
+								</article>
+								<article class="style6">
+									<span class="image">
+										<img src="images/pic06.jpg" alt="" />
+									</span>
+									<a href="./Solutions/2015/#">
+										<h2>2015</h2>
+										<div class="content">
+											<p>Santa was hoping for a white Christmas, but his weather machine's "snow" function is powered by stars, and he's fresh out!</p>
+										</div>
+									</a>
+								</article>
+							</section>
+						</div>
+					</div>
 
-        function backToNav(){
-            document.getElementById('year').style.display = 'grid';
-            document.getElementById('back').style.display = 'none';
-            [2020, 2019, 2018, 2017, 2016, 2015].forEach(year => document.getElementById(year).style.display = 'none');
-        }
-    </script>
-</body>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
