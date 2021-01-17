@@ -19,14 +19,14 @@ Completed: **25 / 25** (100%) ⭐️
 
 ## 2019 Puzzles List
 
-Completed: **3 / 25** (12%) 🔜
+Completed: **4 / 25** (16%) 🔜
 
 |                              |                               |                               |                                |                               |
 | ---------------------------- | ----------------------------- | ----------------------------- | ------------------------------ | ----------------------------- |
 | [✔️ Day 1](<./Solutions/2019/Day 1/>) | [Day 6](<./Solutions/2019/Day 6/>)   | [Day 11](<./Solutions/2019/Day 11/>) | [Day 16](<./Solutions/2019/Day 16/>) | [Day 21](<./Solutions/2019/Day 21/>) |
 | [✔️ Day 2](<./Solutions/2019/Day 2/>) | [Day 7](<./Solutions/2019/Day 7/>)   | [Day 12](<./Solutions/2019/Day 12/>) | [Day 17](<./Solutions/2019/Day 17/>) | [Day 22](<./Solutions/2019/Day 22/>) |
 | [✔️ Day 3](<./Solutions/2019/Day 3/>) | [Day 8](<./Solutions/2019/Day 8/>)   | [Day 13](<./Solutions/2019/Day 13/>) | [Day 18](<./Solutions/2019/Day 18/>) | [Day 23](<./Solutions/2019/Day 23/>) |
-| [Day 4](<./Solutions/2019/Day 4/>) | [Day 9](<./Solutions/2019/Day 9/>)   | [Day 14](<./Solutions/2019/Day 14/>) | [Day 19](<./Solutions/2019/Day 19/>) | [Day 24](<./Solutions/2019/Day 24/>) |
+| [✔️ Day 4](<./Solutions/2019/Day 4/>) | [Day 9](<./Solutions/2019/Day 9/>)   | [Day 14](<./Solutions/2019/Day 14/>) | [Day 19](<./Solutions/2019/Day 19/>) | [Day 24](<./Solutions/2019/Day 24/>) |
 | [Day 5](<./Solutions/2019/Day 5/>) | [Day 10](<./Solutions/2019/Day 10/>) | [Day 15](<./Solutions/2019/Day 15/>) | [Day 20](<./Solutions/2019/Day 20/>) | [Day 25](<./Solutions/2019/Day 25/>) |
 
 ## 2015 Puzzles List
