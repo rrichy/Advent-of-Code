@@ -4,6 +4,11 @@
 | ------ | ------ |
 | `6161` | `2971` |
 
+# Solution
+[JavaScript](./day6.js)
+
+[Puzzle Input](./input.txt)
+
 ## --- Day 6: Custom Customs ---
 
 As your flight approaches the regional airport where you'll switch to a much larger plane, [customs declaration forms](https://en.wikipedia.org/wiki/Customs_declaration) are distributed to the passengers.

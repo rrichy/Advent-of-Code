@@ -4,6 +4,9 @@
 | ------ | ------- |
 |  `179` | `18925` |
 
+# Solution
+[JavaScript](./day7.js)
+
 ## --- Day 7: Handy Haversacks ---
 
 You land at the regional airport in time for your next flight. In fact, it looks like you'll even have time to grab some food: all flights are currently delayed due to _issues in luggage processing_.
