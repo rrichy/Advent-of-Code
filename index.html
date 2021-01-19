@@ -16,6 +16,42 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
+				<!-- Menu -->
+				<nav id="menu">
+					<h2>Year 2020</h2>
+					<ul>
+						<li><a href="generic.html">Day 1</a></li>
+						<li><a href="generic.html">Day 2</a></li>
+						<li><a href="generic.html">Day 3</a></li>
+						<li><a href="generic.html">Day 4</a></li>
+						<li><a href="generic.html">Day 5</a></li>
+
+						<li><a href="generic.html">Day 6</a></li>
+						<li><a href="generic.html">Day 7</a></li>
+						<li><a href="generic.html">Day 8</a></li>
+						<li><a href="generic.html">Day 9</a></li>
+						<li><a href="generic.html">Day 10</a></li>
+
+						<li><a href="generic.html">Day 11</a></li>
+						<li><a href="generic.html">Day 12</a></li>
+						<li><a href="generic.html">Day 13</a></li>
+						<li><a href="generic.html">Day 14</a></li>
+						<li><a href="generic.html">Day 15</a></li>
+
+						<li><a href="generic.html">Day 16</a></li>
+						<li><a href="generic.html">Day 17</a></li>
+						<li><a href="generic.html">Day 18</a></li>
+						<li><a href="generic.html">Day 19</a></li>
+						<li><a href="generic.html">Day 20</a></li>
+
+						<li><a href="generic.html">Day 21</a></li>
+						<li><a href="generic.html">Day 22</a></li>
+						<li><a href="generic.html">Day 23</a></li>
+						<li><a href="generic.html">Day 24</a></li>
+						<li><a href="generic.html">Day 25</a></li>
+					</ul>
+				</nav>
+
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
@@ -29,7 +65,7 @@
 									<span class="image">
 										<img src="images/2020.jpg" alt="" />
 									</span>
-									<a href="./Solutions/2020/#">
+									<a href="#menu" onclick="changeNav('2020')">
 										<h2>2020</h2>
 										<div class="content">
 											<p>A vacation at a nice resort on a tropical island.</p>
@@ -40,7 +76,7 @@
 									<span class="image">
 										<img src="images/2019.jpg" alt="" />
 									</span>
-									<a href="./Solutions/2019/#">
+									<a href="#menu" onclick="changeNav('2019')">
 										<h2>2019</h2>
 										<div class="content">
 											<p>Santa has become stranded at the edge of the Solar System while delivering presents to other planets!</p>
@@ -51,7 +87,7 @@
 									<span class="image">
 										<img src="images/pic03.jpg" alt="" />
 									</span>
-									<a href="generic.html">
+									<a href="#menu" onclick="changeNav('2018')">
 										<h2>2018</h2>
 										<div class="content">
 											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
@@ -62,7 +98,7 @@
 									<span class="image">
 										<img src="images/pic04.jpg" alt="" />
 									</span>
-									<a href="generic.html">
+									<a href="#menu" onclick="changeNav('2017')">
 										<h2>2017</h2>
 										<div class="content">
 											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
@@ -73,7 +109,7 @@
 									<span class="image">
 										<img src="images/pic05.jpg" alt="" />
 									</span>
-									<a href="generic.html">
+									<a href="#menu" onclick="changeNav('2016')">
 										<h2>2016</h2>
 										<div class="content">
 											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
@@ -84,7 +120,7 @@
 									<span class="image">
 										<img src="images/2015.jpg" alt="" />
 									</span>
-									<a href="./Solutions/2015/#">
+									<a href="#menu" onclick="changeNav('2015')">
 										<h2>2015</h2>
 										<div class="content">
 											<p>Santa was hoping for a white Christmas, but his weather machine's "snow" function is powered by stars, and he's fresh out!</p>
@@ -125,6 +161,14 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function changeNav(year){
+					let [h2, ul] = document.getElementById('menu').firstChild.children;
+					h2.innerText = 'Year ' + year;
+
+					[...ul.children].forEach((li, i) => li.firstChild.href = './Solutions/' + year + '/Day ' + (i + 1));
+				}
+			</script>
 
 	</body>
 </html>
