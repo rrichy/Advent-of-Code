@@ -4,6 +4,13 @@
 | -------- | ---------- |
 | `444019` | `29212176` |
 
+# Solution
+[JavaScript](./day1.js)
+
+[Puzzle Input](./input.txt)
+
+[Sample Input](./sample.txt)
+
 ## --- Day 1: Report Repair ---
 
 After saving Christmas [five years in a row](https://adventofcode.com/events), you've decided to take a vacation at a nice resort on a tropical island. Surely, Christmas will go on without you.

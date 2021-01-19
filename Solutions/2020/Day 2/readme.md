@@ -4,6 +4,13 @@
 | --------- | --------- |
 |   `383`   |   `272`   |
 
+# Solution
+[JavaScript](./day2.js)
+
+[Puzzle Input](./input.txt)
+
+[Sample Input](./sample.txt)
+
 ## --- Day 2: Password Philosophy ---
 
 Your flight departs in a few days from the coastal airport; the easiest way down to the coast from here is via [toboggan](https://en.wikipedia.org/wiki/Toboggan).
