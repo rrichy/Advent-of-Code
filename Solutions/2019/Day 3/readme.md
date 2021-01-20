@@ -1,10 +1,19 @@
 # Answers
 
-|Part 1| Part 2|
-|--------|--------|
-|  1225 | 107036 |
+Part 1 | Part 2
+:---: | :---:
+`1225` | `107036`
+
+# Solution
+
+[JavaScript](./day3.js)
+
+[Puzzle Input](./input.txt)
+
+[Sample Input](./sample.txt)
 
 ## --- Day 3: Crossed Wires ---
+
 The gravity assist was successful, and you're well on your way to the Venus refuelling station. During the rush back on Earth, the fuel management system wasn't completely installed, so that's next on the priority list.
 
 Opening the front panel reveals a jumble of wires. Specifically, _two wires_ are connected to a central port and extend outward on a grid. You trace the path each wire takes as it leaves the central port, one wire per line of text (your puzzle input).
@@ -48,6 +57,7 @@ _What is the Manhattan distance_ from the central port to the closest intersecti
 -------------------------------
 
 ## --- Part Two ---
+
 It turns out that this circuit is very timing-sensitive; you actually need to _minimize the signal delay_.
 
 To do this, calculate the _number of steps_ each wire takes to reach each intersection; choose the intersection where the _sum of both wires' steps_ is lowest. If a wire visits a position on the grid multiple times, use the steps value from the _first_ time it visits that position when calculating the total value of a specific intersection.
