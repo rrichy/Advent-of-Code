@@ -2,31 +2,6 @@ const input = require('fs').readFileSync('input.txt').toString().trim().split(/\
 const sample1 = require('fs').readFileSync('sample1.txt').toString().trim().split(/\r?\n/);
 const sample2 = require('fs').readFileSync('sample2.txt').toString().trim().split(/\r?\n/);
 
-// class Body{
-//     constructor(name, point){
-//         this.name = name;
-//         this.point = name === 'COM' ? null : point;
-//         this.orbit = [];
-//     }
-// }
-
-// class LocalMap{
-//     constructor(){
-//         this.body = [];
-//     }
-
-//     add(orbitRelation){
-//         let [point, object] = orbitRelation.split(')'),
-//             center = this.body.find(object => object.name === point) || new Body(point);
-        
-
-//         this.body.push();
-//         return this;
-//     }
-// }
-
-// let map = new LocalMap();
-
 function generateMap(map){ //key:CoM value: orbits
     let localMap = new Map(), count = {'COM': 0};
 
