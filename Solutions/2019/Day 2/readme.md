@@ -1,10 +1,19 @@
 # Answers
 
-|Part 1| Part 2|
-|------| ------|
-|`2894520`| `9342`|
+Part 1 | Part 2
+:---: | :---:
+`2894520` | `9342`
+
+# Solution
+
+[JavaScript](./day2.js)
+
+[Puzzle Input](./input.txt)
+
+[Sample Input](./sample.txt)
 
 ## --- Day 2: 1202 Program Alarm ---
+
 On the way to your gravity assist around the Moon, your ship computer beeps angrily about a "1202 program alarm". On the radio, an Elf is already explaining how to handle the situation: "Don't worry, that's perfectly norma--" The ship computer bursts into flames.
 
 You notify the Elves that the computer's magic smoke seems to have escaped. "That computer ran _Intcode_ programs like the gravity assist program it was working on; surely there are enough spare parts up there to build a new Intcode computer!"
@@ -56,6 +65,7 @@ Once you have a working computer, the first step is to restore the gravity assis
 -------------------
 
 ## --- Part Two ---
+
 "Good, the new computer seems to be working correctly! _Keep it nearby_ during this mission - you'll probably use it again. Real Intcode computers support many more features than your new one, but we'll let you know what they are as you need them."
 
 "However, your current priority should be to complete your gravity assist around the Moon. For this mission to succeed, we should settle on some terminology for the parts you've already built."

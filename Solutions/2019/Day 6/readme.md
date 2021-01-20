@@ -1,9 +1,11 @@
 # Answers
-| Part 1 | Part 2 |
-|--------|--------|
-|`227612`| `454`  |
+
+Part 1 | Part 2
+:---: | :---:
+`227612` | `454`
 
 # Solution
+
 [JavaScript](./day6.js)
 
 [Puzzle Input](./input.txt)
@@ -13,6 +15,7 @@
 [Sample Input](./sample2.txt)
 
 ## --- Day 6: Universal Orbit Map ---
+
 You've landed at the Universal Orbit Map facility on Mercury. Because navigation in space often involves transferring between orbits, the orbit maps here are useful for finding efficient routes between, for example, you and Santa. You download a map of the local orbits (your puzzle input).
 
 Except for the universal Center of Mass (`COM`), every object in space is in orbit around exactly one other object. An [orbit](https://en.wikipedia.org/wiki/Orbit) looks roughly like this:
@@ -65,7 +68,8 @@ _What is the total number of direct and indirect orbits_ in your map data?
 
 --------------------------
 
---- Part Two ---
+## --- Part Two ---
+
 Now, you just need to figure out how many _orbital transfers_ you (`YOU`) need to take to get to Santa (`SAN`).
 
 You start at the object `YOU` are orbiting; your destination is the object `SAN` is orbiting. An orbital transfer lets you move from any object to an object orbiting or orbited by that object.

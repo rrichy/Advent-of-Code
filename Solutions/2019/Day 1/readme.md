@@ -1,10 +1,17 @@
 # Answers
 
-|  Part 1  |   Part 2   |
-| -------- | ---------- |
-| `3490763` | `5233250` |
+Part 1 | Part 2
+:---: | :---:
+`3490763` | `5233250`
+
+# Solution
+
+[JavaScript](./day1.js)
+
+[Puzzle Input](./input.txt)
 
 ## --- Day 1: The Tyranny of the Rocket Equation ---
+
 Santa has become stranded at the edge of the Solar System while delivering presents to other planets! To accurately calculate his position in space, safely align his warp drive, and return to Earth in time to save Christmas, he needs you to bring him measurements from fifty stars.
 
 Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
@@ -26,9 +33,10 @@ The Fuel Counter-Upper needs to know the total fuel requirement. To find it, ind
 
 _What is the sum of the fuel requirements_ for all of the modules on your spacecraft?
 
-________________________
+------------
 
 ## --- Part Two ---
+
 During the second Go / No Go poll, the Elf in charge of the Rocket Equation Double-Checker stops the launch sequence. Apparently, you forgot to include additional fuel for the fuel you just added.
 
 Fuel itself requires fuel just like a module - take its mass, divide by three, round down, and subtract 2. However, that fuel _also_ requires fuel, and _that_ fuel requires fuel, and so on. Any mass that would require _negative fuel_ should instead be treated as if it requires _zero fuel_; the remaining mass, if any, is instead handled by _wishing really hard_, which has no mass and is outside the scope of this calculation.

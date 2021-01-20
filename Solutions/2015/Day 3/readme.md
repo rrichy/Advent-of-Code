@@ -1,9 +1,17 @@
 # Answers
-|Part 1| Part 2|
-|-----|------|
-|2572| 2631|
+
+Part 1 | Part 2
+:---: | :---:
+`2572` | `2631`
+
+# Solution
+
+[JavaScript](./day3.js)
+
+[Puzzle Input](./input.txt)
 
 ## --- Day 3: Perfectly Spherical Houses in a Vacuum ---
+
 Santa is delivering presents to an infinite two-dimensional grid of houses.
 
 He begins by delivering a present to the house at his starting location, and then an elf at the North Pole calls him via radio and tells him where to move next. Moves are always exactly one house to the north (`^`), south (`v`), east (`>`), or west (`<`). After each move, he delivers another present to the house at his new location.
@@ -19,6 +27,7 @@ For example:
 ----------------------
 
 ## --- Part Two ---
+
 The next year, to speed up the process, Santa creates a robot version of himself, _Robo-Santa_, to deliver presents with him.
 
 Santa and Robo-Santa start at the same location (delivering two presents to the same starting house), then take turns moving based on instructions from the elf, who is eggnoggedly reading from the same script as the previous year.
