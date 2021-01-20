@@ -1,7 +1,7 @@
 # Answers
-|Part 1|Part 2|
-|-----|--------|
-|`227612`|`454`|
+| Part 1 | Part 2 |
+|--------|--------|
+|`227612`| `454`  |
 
 # Solution
 [JavaScript](./day6.js)
