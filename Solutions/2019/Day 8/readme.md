@@ -67,4 +67,5 @@ So, the final image looks like this:
 
     01
     10
+    
 _What message is produced after decoding your image?_
