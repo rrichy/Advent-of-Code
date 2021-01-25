@@ -1,18 +1,19 @@
 const input = require('fs').readFileSync('input.txt').toString().trim().split(',').map(Number);
 
-function outputIntCode(intcode, input, index = 0, relBase = 0){    //array of numss
+function outputIntCode(intcode, input, haltStatus = [false, 0, 0]){    //array of numss
     let output = [];
     
     const getIndex = (mode, currentPos) => {
         if(mode == 0) return intcode[currentPos];
         else if(mode == 1) return currentPos;
-        else return intcode[currentPos] + relBase;
+        else return intcode[currentPos] + haltStatus[2];
     }
 
     while(true){
-        if(intcode[index] == 99) return [output, true, index];
+        if(output.length == 2) return output;
+        if(intcode[haltStatus[1]] == 99){ haltStatus[0] = true; return output; }
         
-        let size, opcode = '0'.repeat(5 - String(intcode[index]).length) + intcode[index],
+        let size, opcode = '0'.repeat(5 - String(intcode[haltStatus[1]]).length) + intcode[haltStatus[1]],
             op = opcode.slice(-1), //op [A, B, C, D, E]
             mode = [, opcode[2], opcode[1], opcode[0]]; // for better reading of code; mode[1] for parameter[1]/pos[1] and so on...
             
@@ -21,18 +22,17 @@ function outputIntCode(intcode, input, index = 0, relBase = 0){    //array of nu
         else if(op == 3 || op == 4 || op == 9) size = 2;
         else size = 3;
         
-        let pos = intcode.slice(index, index + size), val = []; // parameter_1 = pos[1], parameter_2 = pos[2] . . ..
+        let pos = intcode.slice(haltStatus[1], haltStatus[1] + size), val = []; // parameter_1 = pos[1], parameter_2 = pos[2] . . ..
 
         for(let j = 1; j < size; j++){  //separating index and its real value for clarity
-            pos[j] = getIndex(mode[j], index + j);
+            pos[j] = getIndex(mode[j], haltStatus[1] + j);
             val[j] = intcode[pos[j]];
         }
-        // console.log(intcode.slice(index, index + size));
-        // console.log([intcode[index], ...val.slice(1)], 'base', relBase);
+
         if(size == 3){ //jumps
-            if(op == 5 && val[1] != 0) index = val[2]; // if par1 is nonzero
-            else if(op == 6 && val[1] == 0) index = val[2]; // if par1 is zero
-            else index += size;
+            if(op == 5 && val[1] != 0) haltStatus[1] = val[2]; // if par1 is nonzero
+            else if(op == 6 && val[1] == 0) haltStatus[1] = val[2]; // if par1 is zero
+            else haltStatus[1] += size;
         }
         else{
             if(size == 4){
@@ -44,21 +44,18 @@ function outputIntCode(intcode, input, index = 0, relBase = 0){    //array of nu
             else if(size == 2){
                 if(op == 3) intcode[pos[1]] = input;
                 else{
-                    if(op == 4){
-                        output.push(val[1]);
-                        if(output.length == 2) return [output, false, index + size, relBase];
-                    }
-                    else relBase += val[1]; // op = 9
+                    if(op == 4) output.push(val[1]);
+                    else haltStatus[2] += val[1]; // op = 9
                 } 
             }
 
-            index += size;
+            haltStatus[1] += size;
         }
     }
 }
 
 function paintedPanelsCount(intcode){
-    let black = new Set(), white = new Set(), [x, y] = [0, 0], pauseIndex = 0, stopCode, base = 0,
+    let black = new Set(), white = new Set(), [x, y] = [0, 0], halt = [false, 0, 0],// pauseIndex = 0, stopCode, base = 0,
         paint, turn, face = '^'
         dir = {
             '^': [() => { x--; face = '<'; }, () => { x++; face = '>'; }],
@@ -68,9 +65,9 @@ function paintedPanelsCount(intcode){
         };
 
     while(true){
-        [[paint, turn], stopCode, pauseIndex, base] = outputIntCode(intcode, white.has(`${x}, ${y}`) ? 1 : 0, pauseIndex, base);
+        [paint, turn] = outputIntCode(intcode, white.has(`${x}, ${y}`) ? 1 : 0, halt);
 
-        if(stopCode) break;
+        if(halt[0]) break;
 
         if(paint == 1){
             white.add(`${x}, ${y}`);
@@ -88,7 +85,7 @@ function paintedPanelsCount(intcode){
 }
 
 function getIdentifier(intcode){
-    let black = new Set(), white = new Set(), [x, y] = [0, 0], pauseIndex = 0, stopCode, input = 1, base = 0,
+    let black = new Set(), white = new Set(), [x, y] = [0, 0], input = 1, halt = [false, 0, 0],
         paint, turn, face = '^'
         dir = {
             '^': [() => { x--; face = '<'; }, () => { x++; face = '>'; }],
@@ -99,9 +96,9 @@ function getIdentifier(intcode){
 
     while(true){
         if(black.size != 0 || white.size != 0) input = white.has(`${x}, ${y}`) ? 1 : 0;
-        [[paint, turn], stopCode, pauseIndex, base] = outputIntCode(intcode, input, pauseIndex, base);
+        [paint, turn] = outputIntCode(intcode, input, halt);
 
-        if(stopCode) break;
+        if(halt[0]) break;
 
         if(paint == 1){
             white.add(`${x}, ${y}`);
