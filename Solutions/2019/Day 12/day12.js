@@ -48,13 +48,37 @@ function totalSystemEnergy(initialPosition, steps){
     return total;
 }
 
-function getLCM(){ // need to optimize
-    let number = Object.values(arguments), max = Math.max(...number), product = number.reduce((a, b) => a * b, 1);
+function getLCM(){
+    let numbers = Object.values(arguments), min = Math.min(...numbers),
+        primes = generatePrimeList(min), factors = Array(numbers.length).fill().map(_=>[]);
 
-    for(let i = product; i >= max; i -= max){
-        if(number.every(a => i % a == 0)) return i;
+    for(let i = 0; i < numbers.length; i++){
+        for(let prime = 0; prime < primes.length; prime++){
+            while(numbers[i] % primes[prime] == 0){
+                factors[i].push(primes[prime])
+                numbers[i] /= primes[prime];
+            }
+            if(numbers[i] == 1) break;
+        }
     }
-    return 'fail' + product;
+
+    let max = Math.max(...factors.map(a => a.length)), final_factor = [];
+    for(let i = 0; i < max; i++){
+        let temp = factors.map(a => a[i]);
+        final_factor.push(...temp.filter((a, index) => index == temp.indexOf(a) && a != undefined));
+    }
+
+    return final_factor.reduce((a, b) => a * b, 1);
+}
+
+function generatePrimeList(number){
+    let temp = Array(number - 1).fill().map((_,i) => i + 2);
+
+    for(let i = 0; i < temp.length; i++){
+        temp = temp.filter(a => a % temp[i] != 0 || a == temp[i]);
+    }
+
+    return temp;
 }
 
 function findReset(initialPosition){
@@ -84,7 +108,7 @@ function findReset(initialPosition){
         
         if(x && y && z) break;
     }
-    
+
     return getLCM(x, y, z);
 }
 
