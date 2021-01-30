@@ -90,8 +90,7 @@ function countBlock(intcode){
 
 function getScore(intcode){
     let sub = [...intcode], status = [false, 0, 0], jstick = 0,
-        terrain = new Map(), block = 0, score = 0, height = 0,
-        ball, paddle;
+        terrain = new Map(), score = 0, height = 0, ball, paddle;
 
     sub[0] = 2;
 
