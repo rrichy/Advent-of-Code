@@ -6,11 +6,11 @@ Part 1 | Part 2
 
 # Solution
 
-[JavaScript]('./day10.js')
+[JavaScript](./day10.js)
 
-[Puzzle Input]('./input.txt')
+[Puzzle Input](./input.txt)
 
-[Sample Input]('./sample.txt')
+[Sample Input](./sample.txt)
 
 ## --- Day 10: Monitoring Station ---
 You fly into the asteroid belt and reach the Ceres monitoring station. The Elves here have an emergency: they're having trouble tracking all of the asteroids and can't be sure they're safe.

@@ -4,13 +4,13 @@ Part 1 | Part 2
 :---: | :---:
 `6490` | `277068010964808`
 
-[JavaScript]('./day12.js')
+[JavaScript](./day12.js)
 
-[Puzzle Input]('./input.txt')
+[Puzzle Input](./input.txt)
 
-[Sample Input]('./sample1.txt')
+[Sample Input](./sample1.txt)
 
-[Sample Input]('./sample2.txt')
+[Sample Input](./sample2.txt)
 
 ## --- Day 12: The N-Body Problem ---
 

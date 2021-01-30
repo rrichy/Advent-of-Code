@@ -4,9 +4,9 @@ Part 1 | Part 2
 :---: | :---:
 `2016` | `RAPRCBPH`
 
-[JavaScript]('./day11.js')
+[JavaScript](./day11.js)
 
-[Puzzle Input]('./input.txt')
+[Puzzle Input](./input.txt)
 
 ## --- Day 11: Space Police ---
 

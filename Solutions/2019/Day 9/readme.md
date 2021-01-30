@@ -6,9 +6,9 @@ Part 1 | Part 2
 
 # Solution
 
-[JavaScript]('./day9.js')
+[JavaScript](./day9.js)
 
-[Puzzle Input]('./input.txt')
+[Puzzle Input](./input.txt)
 
 ## --- Day 9: Sensor Boost ---
 

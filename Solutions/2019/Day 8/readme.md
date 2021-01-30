@@ -6,9 +6,9 @@ Part 1 | Part 2
 
 # Solution
 
-[JavaScript]('./day8.js')
+[JavaScript](./day8.js)
 
-[Puzzle Input]('./input.txt')
+[Puzzle Input](./input.txt)
 
 ## --- Day 8: Space Image Format ---
 

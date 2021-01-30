@@ -4,9 +4,9 @@ Part 1 | Part 2
 :---: | :---:
 `207` | `10247`
 
-[JavaScript]('./day13.js')
+[JavaScript](./day13.js)
 
-[Puzzle Input]('./input.txt')
+[Puzzle Input](./input.txt)
 
 ## --- Day 13: Care Package ---
 
