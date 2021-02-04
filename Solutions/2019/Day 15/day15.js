@@ -53,49 +53,113 @@ function runIntCode(intcode, input = 0, haltStatus = [false, 0, 0]){    //array 
         }
     }
 }
-// const INPUT = $('pre').innerHTML.split(',').map(Number);
-// let sub = [...INPUT]
-// // inputs: 1 y--; 2 y++; 3 x--; 4 x++;
-
-// function drawMaze(intcode){
-//     let sub = [...intcode], origin = [0, 0], [x, y] = [0, 0], maze = new Map(),
-//         stat = [false, 0, 0], run,
-//         outputFunction = [
-//             (dir) => maze.set(`${x + (dir == 3 ? - 1 : dir == 4 ? 1 : 0)},${y + (dir == 1 ? - 1 : dir == 2 ? 1 : 0)}`, '#'),
-//             (dir) => maze.set(`${x + (dir == 3 ? - 1 : dir == 4 ? 1 : 0)},${y + (dir == 1 ? - 1 : dir == 2 ? 1 : 0)}`, ' '),
-//             (dir) => maze.set(`${x + (dir == 3 ? - 1 : dir == 4 ? 1 : 0)},${y + (dir == 1 ? - 1 : dir == 2 ? 1 : 0)}`, 'G'),
-//         ];
-
-//     for(let i = 1; i <= 4; i++){
-//         let copy = [...sub], substat = [...stat];
-//         run = runIntCode(copy, i, substat);
-//         outputFunction[run](i);
-//     }
-
-//     console.log(maze);
-// }
 
 let dirLookUp = {1: 2, 2: 1, 3: 4, 4: 3};
+
 function leastMoves(intcode, origin = null, stat = [false, 0, 0]){
-    let sub = [...intcode], substat = [...stat], run, moves = 0, min = Number.MAX_SAFE_INTEGER;
+    let run, moves = 0, min = Number.MAX_SAFE_INTEGER;
     for(let i = 1; i <= 4; i++){
         if(i != origin){
-            sub = [...intcode], substat = [...stat];
+            sub = [...intcode];
+            substat = [...stat];
             run = runIntCode(sub, i, substat);
-            // console.log(run);
-            if(run == 1){ 
+            
+            if(run == 1){
                 moves = 1 + leastMoves(sub, dirLookUp[i], substat); 
                 if(moves < min && moves > 0) min = moves;
             }
             if(run == 2){ console.log('found it!'); return 1; }
         }
     }
-    // console.log(min, moves);
+
     if(min != Number.MAX_SAFE_INTEGER) return min;
 
     return moves <= 0 ? -1 : moves;
 }
 
+function drawMaze(intcode){
+    let maze = new Map(), miny = Number.MAX_SAFE_INTEGER, minx = Number.MAX_SAFE_INTEGER, maxx = Number.MIN_SAFE_INTEGER, maxy = Number.MIN_SAFE_INTEGER;
+        outputFunction = [
+                        (dir, loc) => {if(maze.get(key(dir, loc)) != 'S') return maze.set(key(dir, loc), '#');},
+                        (dir, loc) => {if(maze.get(key(dir, loc)) != 'S') return maze.set(key(dir, loc), ' ');},
+                        (dir, loc) => {if(maze.get(key(dir, loc)) != 'S') return maze.set(key(dir, loc), 'O');}
+                    ],
+        moving = {1: (position) => position[1]--, 2: (position) => position[1]++, 3: (position) => position[0]--, 4: (position) => position[0]++};
+
+    maze.set('0,0', 'S');
+    const key = (dir, [x, y]) => {return `${x + (dir == 3 ? - 1 : dir == 4 ? 1 : 0)},${y + (dir == 1 ? - 1 : dir == 2 ? 1 : 0)}`}; //dir == i(north, south, west, east)
+
+    const writeToMaze = (currentlocation, intcode, stat) => {
+        if(currentlocation[0] - 1 < minx) minx = currentlocation[0] - 1;
+        if(currentlocation[1] - 1 < miny) miny = currentlocation[1] - 1;
+        if(currentlocation[0] + 1 > maxx) maxx = currentlocation[0] + 1;
+        if(currentlocation[1] + 1 > maxy) maxy = currentlocation[1] + 1;
+        for(let i = 1; i <= 4; i++){
+            let sub = [...intcode], substat = [...stat],
+                run = runIntCode(sub, i, substat);
+
+            outputFunction[run](i, currentlocation);
+        }
+        return;
+    }
+
+    const traverse = (intcode, origin = null, stat = [false, 0, 0], position = [0, 0]) => {
+        let run, moves = 0, min = Number.MAX_SAFE_INTEGER,
+            sub, substat, subpos;
+
+        writeToMaze(position, intcode, stat); //write to maze - -- can be optimized
+        for(let i = 1; i <= 4; i++){
+            if(i != origin){
+                sub = [...intcode];
+                substat = [...stat];
+                run = runIntCode(sub, i, substat);
+                
+                if(run == 1){
+                    subpos = [...position];
+                    moving[i](subpos);
+                    moves = 1 + traverse(sub, dirLookUp[i], substat, subpos); 
+                    if(moves < min && moves > 0) min = moves;
+                }
+                if(run == 2){ console.log('found it!'); return 1; }
+            }
+        }
+    
+        if(min != Number.MAX_SAFE_INTEGER) return min;
+    
+        return moves <= 0 ? -1 : moves;
+    }
+
+    traverse(intcode);
+    let height = maxy - miny + 1, width = maxx - minx + 1, grid = Array(height).fill().map(_=> []), prev = [];
+
+    for(let i = 0; i < height; i++){
+        for(let j = 0; j < width; j++){
+            let temp = maze.get(`${j + minx},${i + miny}`) || '#';
+            grid[i][j] = temp;
+            if(temp == 'O') prev.push([i, j]);
+        }
+    }
+
+    const checkAdjacent = ([x, y]) => {
+        let empty = [];
+        for(let i = -1; i <= 1; i+=2){
+            if(grid[y][x+i] == ' ' || grid[y][x+i] == 'S') empty.push([x+i, y]);
+            if(grid[y+i][x] == ' ' || grid[y+i][x] == 'S') empty.push([x, y+i]);
+        }
+        return empty;
+    }
+
+    let i;
+    for(i = 1;; i++){
+        prev = prev.reduce((a,b)=> a.concat(checkAdjacent(b)), []);
+
+        if(prev.length == 0) return i - 1;
+        prev.forEach(([x, y]) => { grid[y][x] = 'O'; });
+    }
+
+    // console.log(grid.map(a => a.join('')).join('\n'));
+}
 
 
 console.log('Part 1:', leastMoves(INPUT));
+console.log('Part 2:', drawMaze(INPUT));
