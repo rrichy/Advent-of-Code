@@ -36,10 +36,10 @@ function dustCollected(ASCII){
         C = 'L,10,R,8,R,12'.split('').map(a=>a.charCodeAt()).concat(10);
 
     subASCII[0] = 2;
-   
-    layout = runIntCode(subASCII, mainRoute.concat(A, B, C, ['y'.charCodeAt(), 10]), 0, haltStatus);
+
+    layout = runIntCode(subASCII, mainRoute.concat(A, B, C, 'y'.charCodeAt(), 10, 0, haltStatus));
     // console.log(layout.map(a=>String.fromCharCode(a)).join(''));
-    // console.log();
+
     return layout[layout.length - 1];
 }
 
