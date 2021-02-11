@@ -58,7 +58,7 @@ function listPortal(maze) {
     }
 
     rows = maze.split(/\r?\n/);
-    let key = {};
+    let key = {}, visited = {}, queue = [['AA', 0]];
 
     const traverse = ([col, row], mov = 0, visited = new Set()) => {
         let nextlookup = [
@@ -80,15 +80,19 @@ function listPortal(maze) {
             if(/[A-Z]/.test(dir[i]) && !visited.has(coorTostring(...nextlookup[i]))) key[whosePort(nextlookup[i])] = mov + 1;
             if(dir[i] == '.' && !visited.has(coorTostring(...nextlookup[i]))) traverse(nextlookup[i], mov + 1, new Set([...visited]));
         }
-        
     }
 
     traverse(portal['AA'][2], 0, new Set(portal['AA'].map(a => coorTostring(...a))));
+    // let temp = queue.shift();
+    // visited[temp[0]] = temp[1];
+    // queue.push(...Object.entries(key).sort((a, b) => a[1] - b[1]));
+    // key = {};
+
+    // while(true){
+
+    // }
 
     return key;
-    
-
-    // return portal;
 }
 
 function coorTostring(x, y) {
@@ -97,4 +101,4 @@ function coorTostring(x, y) {
 
 // console.log(SAMPLES)
 
-console.log(listPortal(SAMPLES[0]));
+console.log(listPortal(INPUT));
