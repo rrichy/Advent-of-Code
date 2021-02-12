@@ -58,7 +58,7 @@ function listPortal(maze) {
     }
 
     rows = maze.split(/\r?\n/);
-    let key = {}, visited = {}, queue = [['AA', 0]];
+    let key = {}, visited = {}, unvisited = {}, queue = [['AA', 0]];
 
     const traverse = ([col, row], mov = 0, visited = new Set()) => {
         let nextlookup = [
@@ -83,16 +83,39 @@ function listPortal(maze) {
     }
 
     traverse(portal['AA'][2], 0, new Set(portal['AA'].map(a => coorTostring(...a))));
-    // let temp = queue.shift();
-    // visited[temp[0]] = temp[1];
-    // queue.push(...Object.entries(key).sort((a, b) => a[1] - b[1]));
-    // key = {};
+    let temp = queue.shift();
+    visited[temp[0]] = temp[1];
+    queue.push(...Object.entries(key).sort((a, b) => a[1] - b[1]));
+    for(let [port, dist] of queue){
+        unvisited[port] = [dist, 'AA'];
+    }
+    // console.log(unvisited);
 
-    // while(true){
+    while(true){
+        // console.log(queue);
+        // console.log(unvisited);
+        // console.log(visited);
+        // console.log();
+        temp = queue.shift();
+        while(portal[temp[0]].length) {
+            let currentPortal = portal[temp[0]].splice(0,3);
+            // console.log(currentPortal);
+            key = {};
+            traverse(currentPortal[2], temp[1], new Set(currentPortal.map(a => coorTostring(...a))));
+            for(let [port, val] of Object.entries(key)){
+                if(!Object.keys(visited).includes(port) && (!unvisited[port] || val < unvisited[port][0])){
+                    unvisited[port] = [val, temp[0]];
+                    queue = queue.filter(a => a[0] != port);
+                    queue.push([port, val]);
+                }
+            }
+        }
+        visited[temp[0]] = temp[1];
+        queue.sort((a, b) => a[1] - b[1]);
+        if(queue.length == 0) break;
+    }
 
-    // }
-
-    return key;
+    return visited['ZZ'] - 1;
 }
 
 function coorTostring(x, y) {
@@ -101,4 +124,4 @@ function coorTostring(x, y) {
 
 // console.log(SAMPLES)
 
-console.log(listPortal(INPUT));
+console.log('Part 1:', listPortal(INPUT));
