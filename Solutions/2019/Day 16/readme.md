@@ -84,7 +84,8 @@ After _100_ phases of FFT, _what are the first eight digits in the final output 
 
 -------------------------------
 
---- Part Two ---
+## --- Part Two ---
+
 Now that your FFT is working, you can decode the _real signal_.
 
 The real signal is your puzzle input _repeated 10000 times_. Treat this new signal as a single input list. Patterns are still calculated as before, and 100 phases of FFT are still applied.
