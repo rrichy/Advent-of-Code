@@ -8,7 +8,7 @@
 
 [JavaScript](./day1.js)
 
-[Puzzle Input](./input.txt)
+[Puzzle Input](./puzzle.txt)
 
 ## --- Day 1: Sonar Sweep ---
 

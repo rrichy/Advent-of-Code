@@ -8,7 +8,9 @@
 
 [JavaScript](./day3.js)
 
-[Puzzle Input](./input.txt)
+[Puzzle Input](./puzzle.txt)
+
+[Sample Input](./sample.txt)
 
 ## --- Day 3: Binary Diagnostic ---
 

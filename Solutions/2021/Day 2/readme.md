@@ -8,7 +8,7 @@
 
 [JavaScript](./day2.js)
 
-[Puzzle Input](./input.txt)
+[Puzzle Input](./puzzle.txt)
 
 ## --- Day 2: Dive! ---
 
