@@ -46,5 +46,5 @@ function getLifeSupport(input) {
   // return { gammaBinary, epsilonBinary };
 }
 
-// console.log("Part 1:", getPowerConsumption(puzzleInput));
+console.log("Part 1:", getPowerConsumption(puzzleInput));
 console.log("Part 2:", getLifeSupport(puzzleInput));
